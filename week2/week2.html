@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="utf-8" />
+        <title>week2</title>
+        
+    </head>
+    <body>
+        <script>
+            console.log("===Task1===");
+            function findAndPrint(messages){
+                // write down your judgment rules in comments
+                //確定超過17歲的條件定義:18 years old、college student(假定是一般沒有跳級的大學生)、台灣法定年齡為18歲、下周可以投票給美國總統，代表他快要滿18歲(或是已經滿18歲)，那代表也超過17歲
+                //不能確定年齡：只有打招呼的人(Mary, Jenny)
+
+                // your code here, based on your own rules
+                for (let name in messages) {
+                const message = messages[name];
+                if (
+                message.includes("18 years old") ||
+                message.includes("college student") ||
+                message.includes("legal age in Taiwan")||
+                message.includes("vote for Donald Trump next week") 
+                ) {console.log(name);
+                    }
+                
+                }
+            }
+                
+            
+            findAndPrint({
+            "Bob":"My name is Bob. I'm 18 years old.",
+            "Mary":"Hello, glad to meet you.",
+            "Copper":"I'm a college student. Nice to meet you.",
+            "Leslie":"I am of legal age in Taiwan.",
+            "Vivian":"I will vote for Donald Trump next week",
+            "Jenny":"Good morning."
+            });
+        </script>
+        <script>
+                console.log("===Task2===");
+                function calculateSumOfBonus(data) {
+                const employees = data.employees;
+                let bonusTotal = 0;
+
+                for (const employee of employees) {
+                    let salary = employee.salary;
+                    const performance = employee.performance;
+                    const role = employee.role;
+
+                    // 計算薪水:
+                    if (typeof salary === "string" && salary.endsWith("USD")) {
+                        salary = parseInt(salary.slice(0, -3)) * 30;
+                    } 
+                    else if(typeof salary==="string"&& salary.includes(",")){
+                        salary = salary.replace(",", "")}
+                    else {
+                    salary = parseInt(salary);
+                    } 
+                    // 根據績效計算獎金比例:
+                    //"above average"：獎金比例為薪水的 10%。
+                    //"average"：獎金比例為薪水的 5%。
+                    //"below average"：獎金比例為薪水的 2%。
+                    let bonusPercentage = 0;
+                        if (performance === "above average") {
+                        bonusPercentage += 0.1;
+                        } else if (performance === "average") {
+                        bonusPercentage += 0.05;
+                        } else if (performance === "below average") {
+                        bonusPercentage += 0.02;
+                        }
+
+                    // 根據職位加給獎金:
+                    //"Engineer"：+新台幣800
+                    //"CEO"：+新台幣1000
+                    //"Sales"：+新台幣500
+                    let rolebonus=0;
+                        if (role === "Engineer") {
+                            rolebonus += 800 ;
+                        } else if (role === "CEO") {
+                            rolebonus += 1000 ;
+                        } else if (role === "Sales") {
+                            rolebonus += 600 ;
+                        }
+                    // 計算獎金金額並加總到獎金總和
+                    const bonus = salary * bonusPercentage+rolebonus;
+                    bonusTotal += bonus;    
+                    }
+
+                    console.log(Math.floor(bonusTotal));
+                    }
+
+                calculateSumOfBonus({
+                employees: [
+                    {
+                    name: "John",
+                    salary: "1000USD",
+                    performance: "above average",
+                    role: "Engineer"
+                    },
+                    {
+                    name: "Bob",
+                    salary: 60000,
+                    performance: "average",
+                    role: "CEO"
+                    },
+                    {
+                    name: "Jenny",
+                    salary: "50,000",
+                    performance: "below average",
+                    role: "Sales"
+                    }
+                ]
+                }); // call calculateSumOfBonus function
+
+        </script>
+        <script>
+            console.log("===Task3===");
+            function func(...data){
+                const middleNameCount = {};
+
+                for (let a=0; a<data.length; a++) {
+                const name = data[a];
+                const nameParts = name.split(" ");
+                const middleName = nameParts[0][1];
+
+                if (middleNameCount[middleName]) {
+                    middleNameCount[middleName].count++;
+                    middleNameCount[middleName].name = null; 
+                } else {
+                    middleNameCount[middleName] = {
+                    count: 1,
+                    name: name, 
+                    };
+                }
+                }
+
+                let hasUniqueMiddleName = false; 
+
+            
+                for (const middleName in middleNameCount) {
+                if (middleNameCount[middleName].count === 1) {
+                    const fullName = middleNameCount[middleName].name;  
+                    console.log(fullName);
+                    hasUniqueMiddleName = true;
+                    
+                }
+                }
+
+                if (!hasUniqueMiddleName) {
+                console.log("沒有");
+                }
+            }
+
+            func("彭大牆", "王明雅", "吳明"); // print 彭⼤牆
+            func("郭靜雅", "王立強", "林靜宜", "郭立恆", "林花花"); // print 林花花
+            func("郭宣雅", "林靜宜", "郭宣恆", "林靜花"); // print 沒有
+
+
+        </script>
+         <script>
+            console.log("===Task4===");
+            function getNumber(index){
+                let n = 0;
+                
+
+            for (let i = 1; i <= index; i++) {
+                if (i % 2 === 1) {
+                n += 4;
+                } else {
+                n -= 1;
+                }
+            }
+
+            console.log(n);
+            }
+
+            getNumber(1); // print 4
+            getNumber(5); // print 10
+            getNumber(10); // print 15
+          
+       
+
+        </script>
+    </body>
+</html>
