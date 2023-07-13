@@ -1,0 +1,476 @@
+body{
+    font-size: 20px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+@media (min-width: 1200px) and (max-width: 1920px)  {
+   
+    .headline{
+        display: flex;
+        align-items: center;
+        padding: 5px;
+        
+    }
+    
+    .left{
+        width:100px;
+        align-items: center;
+        display: flex;
+        
+    }
+
+    .right-web{
+        display:flex;
+        justify-content:flex-end;
+        flex:auto;
+        align-items: center;
+        
+    }
+    .right-mobile{
+        display: none;
+    }
+
+
+    .item{
+        width:60px;
+        text-align: center;
+
+    }
+
+    .welcome{
+        background-color: #caf5fb;
+        height: 250px;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        
+       
+    }
+    .text{
+        font-size: 40px;
+        text-align: center;
+    }
+
+    .top3{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        width:1200px;
+        margin: 0 auto;
+        margin-top: 20px;
+        
+    }
+    .top3-1{
+        display:flex;
+        margin: 10px;
+        
+    }
+   
+    .photo{
+        width:80PX;
+        height: 50px;
+        object-fit:cover;
+        align-items: center;
+        justify-content: center;
+        
+      
+    }
+
+    .top3item{
+        background-color: #b4dee3;
+        align-items: center;
+        height: 50PX;
+        width:300px;
+        display:flex;
+        
+         
+        
+    }
+    .top3item-text{
+        align-items: center;
+        margin-left: 10px;  
+        
+    }
+
+
+    .content{
+        display:flex;
+        flex-wrap:wrap; 
+        align-items: center;
+        justify-content: center;
+        width:1200px;
+        margin: 0 auto;
+    }
+
+    
+    .product{
+        margin:10px;   
+        width: 15%;
+        position: relative;
+        
+                
+    }
+
+    .photo2{
+        width:180px;
+        object-fit:cover;
+        align-items: center;
+        justify-content: center;        
+        display: block;
+        position: relative;
+       
+
+    }
+    .productitem{
+        position: absolute;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.7); /* 白色半透明背景 */
+        color: #000; /* 黑色文字 */
+        height: 40px;
+        width:180px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        
+        
+
+    }
+
+    .productitem-text{
+        text-align: center; 
+        justify-content: center;
+        display:flex;   
+        align-items: center;
+
+    }
+    .product .star-icon {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        width: 20px;
+        height: 20px;
+        background-image: url('star2.png');
+        background-size: cover;
+
+    }
+    
+    }
+    
+    @media  (max-width: 1200px) {
+        /*螢幕小於1200PX，套用這個區塊的CSS*/
+        .headline{
+            display:flex;
+            align-items: center;
+            padding: 5px;
+        }
+        
+        .left{
+            width:100px;           
+            align-items: center;
+            
+        }
+    
+        .right-web{
+            display:flex;
+            justify-content:flex-end;
+            flex:auto;
+            align-items: center;
+            
+        }
+        .right-mobile{
+            display: none;
+        }
+    
+    
+        .item{
+            width:60px;
+            text-align: center;
+          
+        }
+    
+        .welcome{
+            background-color: #caf5fb;
+            height: 250px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin-bottom: 20PX;
+          
+        }
+        .text{
+            font-size: 40px;
+            text-align: center;
+        }
+    
+        .top3{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px; 
+            flex-wrap:wrap;
+            width:90%;  
+            margin: 0 auto;
+            
+        }
+        .top3-1{
+            display:flex;
+            margin:1%;
+            width:44%;
+            flex:auto
+
+        }
+       
+        .photo{
+            width:80PX;
+            height: 50px;
+            object-fit:cover;
+            align-items: center;
+            justify-content: center;
+           
+          
+        }
+    
+        .top3item{
+            background-color: #b4dee3;
+            align-items: center;
+            height: 50PX;  
+            flex:auto;
+            display:flex;
+          
+            
+        }
+        .top3item-text{
+            align-items: center;
+            margin-left: 10px;  
+           
+        }
+    
+    
+        .content{
+            display:flex;
+            flex-wrap:wrap; 
+            width:90%;
+            justify-content: center;  
+            margin: 0 auto;
+            align-items: center;   
+            
+            
+        }
+    
+       
+        .product{
+            align-items: center;
+            justify-content: center;          
+            width:21.5%;
+            margin:1%;   
+            flex:auto;   
+            position: relative;   
+            
+
+        }
+    
+        .photo2{
+            max-width: 100%;
+            max-height: 100%;
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            display: block;
+                
+        }
+        .productitem{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30%;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;        
+            
+    
+        }
+    
+        .productitem-text{
+            text-align: center;       
+            display:flex;
+            flex:auto;
+            justify-content: center;
+            
+        }
+    
+        .product .star-icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 20px;
+            height: 20px;
+            background-image: url('star2.png');
+            background-size: cover;
+    
+        }
+     
+        
+    }
+    @media (min-width: 360px) and (max-width: 600px) {
+        /*螢幕小於1200PX，套用這個區塊的CSS*/
+        .headline{
+            display:flex;
+            align-items: center;
+            padding: 5px;
+        }
+        
+        .left{
+            width:100px;
+            align-items: center;
+            
+        }
+    
+        .right-web{
+            display:none;
+           
+            
+        }
+        .right-mobile{
+            display: flex;
+            justify-content:flex-end;
+            flex:auto;
+            align-items: center;
+        }
+    
+    
+        .item{
+            width:60px;
+            text-align: center;
+    
+        }
+    
+        .welcome{
+            background-color: #caf5fb;
+            height: 250px;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10PX;
+          
+        }
+        .text{
+            font-size: 30px;
+            text-align: center;
+        }
+    
+        .top3{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 30px; 
+            flex-wrap:wrap;
+            width:90%;  
+            margin: 0 auto;
+            
+        }
+        .top3-1{
+            display:flex;
+            margin-top:10px;
+            width:90%;
+            flex:auto
+
+        }
+       
+        .photo{
+            width:80PX;
+            height: 50px;
+            object-fit:cover;
+            align-items: center;
+            justify-content: center;
+           
+          
+        }
+    
+        .top3item{
+            background-color: #b4dee3;
+            align-items: center;
+            height: 50PX;  
+            flex:auto;
+            display:flex;
+          
+            
+        }
+        .top3item-text{
+            align-items: center;
+            margin-left: 10px;  
+        }
+    
+    
+        .content{
+            display:flex;
+            flex-wrap:wrap; 
+            width:90%;
+            justify-content: center;  
+            margin: 0 auto;
+            align-items: center;   
+            
+            
+        }
+    
+       
+        .product{
+            align-items: center;
+            justify-content: center;          
+            width:90%;
+            margin-top:10px;   
+            flex:auto;  
+            position: relative;       
+            
+
+        }
+    
+        .photo2{
+            max-width: 100%; /* 圖片的最大寬度為方框的寬度 */
+            max-height: 100%; /* 圖片的最大高度為方框的高度 */
+            width: 100%; /* 寬度自動調整以保持比例 */
+            height: auto; /* 高度自動調整以保持比例 */
+            object-fit: cover; /* 控制圖片在容器中的呈現方式 */
+            display: block;
+            
+    
+        }
+        .productitem{
+            position: absolute;
+            background-color: rgba(255, 255, 255, 0.7);
+            color: #000; 
+            height: 50PX;
+            bottom: 0;
+            width: 100%;
+            max-width: 100%; /* 圖片的最大寬度為方框的寬度 */
+            display: flex;
+            align-items: center;
+            justify-content: center;           
+            
+    
+        }
+    
+        .productitem-text{
+            text-align: center;        
+            display:flex;
+            flex:auto;
+            justify-content: center;
+    
+        }
+    
+    
+        .product .star-icon {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 25px;
+            height: 25px;
+            background-image: url('star2.png');
+            background-size: cover;
+    
+        }
+        
+    }
