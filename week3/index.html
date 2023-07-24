@@ -205,7 +205,7 @@
                         const productImage = document.createElement("img");
                         productImage.src = data.result.results[i].file.match(/https:\/\/.*?(?:\.jpg|\.JPG)/)[0];
                         productImage.className = "photo2";
-                        productImage.id = productImageIds[i - 3]; // Update the index to match the productImageIds array
+                        productImage.id = productImageIds[i - 3]; 
                         productDiv.appendChild(productImage);
 
                         const productitemDiv = document.createElement("div");
