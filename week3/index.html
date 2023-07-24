@@ -174,7 +174,6 @@
                     }
                 }
 
-                // 定義product圖片的id陣列
                 const productImageIds = [
                     "product1Image",
                     "product2Image",
@@ -197,16 +196,16 @@
                     contentDiv.removeChild(contentDiv.firstChild);
                 }
 
-                // 使用for迴圈動態創建並插入前12個產品項目
-                for (let i = 0; i < productImageIds.length; i++) {
-                    if (i < 12) {
+                // 使用for迴圈動態創建並插入12個產品項目 
+                for (let i = 3; i < productImageIds.length + 3; i++) {
+                    if (i < 15) { 
                         const productDiv = document.createElement("div");
                         productDiv.className = "product";
 
                         const productImage = document.createElement("img");
                         productImage.src = data.result.results[i].file.match(/https:\/\/.*?(?:\.jpg|\.JPG)/)[0];
                         productImage.className = "photo2";
-                        productImage.id = productImageIds[i];
+                        productImage.id = productImageIds[i - 3]; // Update the index to match the productImageIds array
                         productDiv.appendChild(productImage);
 
                         const productitemDiv = document.createElement("div");
@@ -214,7 +213,7 @@
 
                         const productitemText = document.createElement("div");
                         productitemText.className = "productitem-text";
-                        productitemText.textContent = data.result.results[i].stitle; // 此處修正
+                        productitemText.textContent = data.result.results[i].stitle; 
                         productitemDiv.appendChild(productitemText);
 
                         productDiv.appendChild(productitemDiv);
