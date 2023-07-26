@@ -38,7 +38,7 @@ def signin():
     else:
         return redirect("/error?message=帳號或密碼輸入錯誤")
 
-@app.route("/signout")
+@app.route("/signout",methods=["GET"])
 def signout():
     del session["username"]
     return redirect("/")
