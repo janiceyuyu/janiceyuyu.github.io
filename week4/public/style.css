@@ -1,0 +1,50 @@
+.headline{
+    justify-content: center;
+    align-items: center;
+    background-color: #caf5fb;
+    font-size: 25px;
+    text-align: center;
+    font-weight:bold;
+    height: 70px;
+    display: flex;
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:10px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form .account,
+  form .password {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 5px; /* 設置間距 */
+      width: 300px; /* 設定容器寬度 */
+  }
+  
+  form .account label {
+      margin-right: 10px; /* 設置"帳號"和填寫帳號的間距 */
+  }
+  
+  form .password label {
+      margin-right: 10px; /* 設置"密碼"和填寫密碼的間距 */
+  }
+  
+  form.agreement {
+      display: flex;
+      align-items: center;
+      margin: 10px; /* 設置間距 */
+  }
+  
+  button {
+      margin: 10px;
+  }

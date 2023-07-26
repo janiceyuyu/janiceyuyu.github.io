@@ -1,0 +1,22 @@
+.headline{
+    justify-content: center;
+    align-items: center;
+    background-color: #caf5fb;
+    font-size: 25px;
+    text-align: center;
+    font-weight:bold;
+    height: 70px;
+    display: flex;
+}
+body{
+    justify-content: center;
+    text-align: center;
+  
+}
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin:10px;
+}

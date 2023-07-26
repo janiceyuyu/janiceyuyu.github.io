@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員系統</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="headline">歡迎光臨，請輸入帳號密碼</div>
+    <div class="title">登入系統</div>
+    <form action="/signin" method="POST" onsubmit="return validateForm()">
+        <div class="account">
+            <label>帳號</label>
+            <input type="text" name="username"/>
+        </div>
+        <div class="password">
+            <label>密碼</label>
+            <input type="password" name="password"/>
+        </div>
+        <div class="agreement">
+            <label>同意條款</label>
+            <input type="checkbox" id="termsCheckbox"/>
+        </div>
+        
+        <button>登入</button>
+    </form>
+    <script>
+        function validateForm() {
+            let checkbox = document.getElementById("termsCheckbox");
+            if (!checkbox.checked) {
+                alert("請勾選同意條款");
+                return false; // 阻止表單提交
+            }
+            return true; // 允許表單提交
+        }
+    </script>
+</body>
+</html>
