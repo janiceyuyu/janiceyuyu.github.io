@@ -148,11 +148,6 @@ def createMessage():
             con.commit()
             return redirect("/member")
 
-       
-        
-        if con.is_connected():
-            cursor.close()
-            con.close()
 
     return redirect("/member")
 
