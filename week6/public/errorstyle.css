@@ -1,0 +1,18 @@
+.headline{
+    justify-content: center;
+    align-items: center;
+    background-color: #caf5fb;
+    font-size: 25px;
+    text-align: center;
+    font-weight:bold;
+    height: 70px;
+    display: flex;
+}
+body{
+    justify-content: center;
+    text-align: center;
+  
+}
+.error-message {
+    margin: 20px;
+}
