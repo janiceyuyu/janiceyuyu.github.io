@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>會員系統</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="headline">歡迎光臨，請輸入帳號密碼</div>
+    <div class="title">註冊帳號</div>
+    <form action="/signup" method="POST" onsubmit="return validateSignupForm()">
+        <div class="account">
+            <label>姓名</label>
+            <input type="text" name="name" id="name"/>
+        </div>
+        <div class="account">
+            <label>帳號</label>
+            <input type="text" name="username" id="signupUsername"/>
+        </div>
+        <div class="password">
+            <label>密碼</label>
+            <input type="password" name="password" id="signupPassword"/>
+        </div>
+        
+        <button>註冊</button>
+    </form>
+    <div class="title">登入系統</div>
+    <form action="/signin" method="POST" onsubmit="return validateSigninForm()">
+        <div class="account">
+            <label>帳號</label>
+            <input type="text" name="username" id="signinUsername"/>
+        </div>
+        <div class="password">
+            <label>密碼</label>
+            <input type="password" name="password" id="signinPassword"/>
+        </div>
+        
+        <button>登入</button>
+    </form>
+    <script>
+        function validateSignupForm() {
+            let name = document.getElementById("name").value;
+            let username = document.getElementById("signupUsername").value;
+            let password = document.getElementById("signupPassword").value;
+            
+            if (name === "" || username === "" || password === "") {
+                alert("請填寫註冊帳號所有欄位。");
+                return false;
+            }
+        }
+
+        function validateSigninForm() {
+            let username = document.getElementById("signinUsername").value;
+            let password = document.getElementById("signinPassword").value;
+            
+            if (username === "" || password === "") {
+                alert("請填寫登入帳號所有欄位。");
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
